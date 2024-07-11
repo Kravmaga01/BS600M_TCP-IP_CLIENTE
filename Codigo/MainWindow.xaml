@@ -1,0 +1,244 @@
+﻿<Window x:Class="BC6200.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BC6200"
+        xmlns:controls="clr-namespace:BC6200.UserControls"
+        mc:Ignorable="d"
+        Height="720" Width="1280" 
+        MinHeight="600" MinWidth="1024"
+        SizeChanged="Window_SizeChanged_1"
+        WindowStartupLocation="CenterScreen"
+        Icon="Assets/Logo ValiQC.png">
+
+    <Window.Resources>
+        <ImageBrush x:Key="ResulFalse" ImageSource="Assets/Resul True.png" Stretch="Fill"></ImageBrush>
+        <ImageBrush x:Key="Config" ImageSource="Assets/Config True.png" Stretch="Fill"></ImageBrush>
+        <ImageBrush x:Key="SalirTrue" ImageSource="Assets/SalirTrue.png" Stretch="Fill"></ImageBrush>
+        <ImageBrush x:Key="ConectarHover" ImageSource= "Assets/ConectarHover.png" Stretch="Fill"></ImageBrush>
+        <ImageBrush x:Key="BtnDesconectaHover" ImageSource= "Assets/BtnDesconectaHover.png" Stretch="Fill"></ImageBrush>
+        <ImageBrush x:Key="BtnDesconectarImg" ImageSource= "Assets/BtnDesconectar.png" Stretch="Fill"></ImageBrush>
+        <ImageBrush x:Key="BtnDesconectarDeshabilitarImg" ImageSource= "Assets/BtnDesconectarDeshabilitar.png" Stretch="Fill"></ImageBrush>
+
+
+        <ControlTemplate x:Key="BtnConectar" TargetType="{x:Type Button}">
+            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="#FFDFE2EC" BorderThickness="0" CornerRadius="8">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource ConectarHover}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource ConectarHover}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource ConectarHover}"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="border" Property="Background" Value="white"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="BtnDesconectar" TargetType="{x:Type Button}">
+            <Border x:Name="border" Background="{StaticResource BtnDesconectarImg}" BorderBrush="Gray" BorderThickness="0" CornerRadius="8">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource BtnDesconectaHover}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource BtnDesconectaHover}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BtnDesconectaHover}"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="border" Property="Background" Value="white"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ResulFalseStyle" TargetType="{x:Type Button}">
+
+            <Border x:Name="border" 
+            Background="{TemplateBinding Background}" 
+            BorderBrush="{TemplateBinding BorderBrush}" 
+            BorderThickness="{TemplateBinding BorderThickness}" 
+            CornerRadius="8">
+
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource ResulFalse}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource ResulFalse}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource ResulFalse}"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="border" Property="Background" Value="white"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ConfigurationStyle" TargetType="{x:Type Button}">
+            <Border x:Name="border" 
+             Background="{TemplateBinding Background}" 
+             BorderBrush="{TemplateBinding BorderBrush}" 
+             BorderThickness="{TemplateBinding BorderThickness}" 
+             CornerRadius="8">
+
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource Config}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource Config}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Config}"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource BtnDesconectarDeshabilitarImg}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="btnSalirStyle" TargetType="{x:Type Button}">
+            <Border x:Name="border"
+            Background="{TemplateBinding Background}"
+            BorderBrush="Transparent" 
+            BorderThickness="0" 
+            CornerRadius="8">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource SalirTrue}"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="{StaticResource SalirTrue}"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="Transparent"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="border" Property="Background" Value="White"/>
+                    <Setter TargetName="border" Property="BorderBrush" Value="Transparent"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="BarraCargarResultado" TargetType="{x:Type Button}">
+            <Border x:Name="border"
+                 Background="{TemplateBinding Background}"
+                 BorderBrush="Transparent" 
+                 BorderThickness="0" 
+                 CornerRadius="8">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+
+        </ControlTemplate>
+
+    </Window.Resources>
+
+
+
+
+    <DockPanel>
+
+        <DockPanel Width="280" LastChildFill="True" Margin="0,0,0,0">
+            <DockPanel.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#6B4B8B" Offset="0"/>
+                    <GradientStop Color="#4051FC" Offset="1"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image Width="230" Height="114" Margin="0,60,0,40" Source="Assets/Logo ValiQC.png" />
+                <Button Template="{DynamicResource ResulFalseStyle}" Width="190" Height="60" Margin="0,0,0,40" BorderBrush="#CC16D6" Click="Button_Click" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/Resul False.png" Stretch="Fill"/>
+                    </Button.Background>
+                </Button>
+                <Button Name="BtnConfiguracion" Template="{DynamicResource ConfigurationStyle}" Width="192" Height="60" BorderBrush="#4051FC" Margin="0,0,0,50" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Button_Click_1">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/Config False.png" Stretch="Fill"/>
+                    </Button.Background>
+                </Button>
+                <Button Template="{DynamicResource btnSalirStyle}" Width="50" Height="67" Margin="0,0,0,50" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/Salir.png"/>
+                    </Button.Background>
+                </Button>
+                <Image Height="57" Width="150" Source="Assets/Logo ITH.png" HorizontalAlignment="Center"/>
+                <Label x:Name="TextoVersion" Foreground="#FFFFFBFB" FontSize="16" Margin="70,0,0,0" />
+            </StackPanel>
+        </DockPanel>
+
+        <Border CornerRadius="25"                    
+            BorderThickness="5"
+                Background="#FFEFF2FD"
+            Margin="20,15,20,15">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Background="#FFEFF2FD" Grid.Column="1"  Margin="15,15,15,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <!-- Allows the rectangle to take up available space -->
+                        <ColumnDefinition Width="Auto" MinWidth="285"/>
+                        <!-- Allows the button to size itself based on its content -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Rectangle aligned to the left -->
+                    <!-- Button aligned to the right -->
+                    <Button Name="ConectarButton" Grid.Column="1" Template="{DynamicResource BtnConectar}"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="70" Width="200" Margin="23,0,0,0" Click="ConectarButton_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Assets/Conectar.png"/>
+
+                        </Button.Background>
+                    </Button>
+                    <Rectangle Grid.Column="0" Margin=  "36,5,99,0"    MaxWidth="500" >
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/Assets/Barra Carga Resultado.png" />
+                        </Rectangle.Fill>
+
+                    </Rectangle>
+
+                </Grid>
+
+
+                <!-- contenidoprincipal -->
+
+                <Frame x:Name="DashBoradPanelFrame" Grid.Column="1" Grid.Row="1" Margin="20"  NavigationUIVisibility="Hidden" Background="Transparent"/>
+
+
+                <!-- fotter -->
+                <Label Grid.Column="1" Grid.Row="2" Content="IT Health Todos los derechos reservados - 2024"
+                   Foreground="#FF3850EB" FontFamily="Open Sans, Italic"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"/>
+            </Grid>
+        </Border>
+    </DockPanel>
+
+</Window>

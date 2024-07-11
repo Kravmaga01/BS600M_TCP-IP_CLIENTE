@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="UserControls\UCInput.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\CargueResultados.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\ConfiguracionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\UCInput.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\CargueResultados.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\ConfiguracionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,192 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <BaseOutputPath>D:\DM_BC6200\Publicacion</BaseOutputPath>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Barra Carga Resultado.png" />
+    <None Remove="Assets\BottonGuardar.png" />
+    <None Remove="Assets\btnConexion.png" />
+    <None Remove="Assets\BtnConexionFocused.png" />
+    <None Remove="Assets\BtnConexionHover.png" />
+    <None Remove="Assets\BtnDesconectaHover.png" />
+    <None Remove="Assets\BtnDesconectar.png" />
+    <None Remove="Assets\BtnDesconectarDeshabilitar.png" />
+    <None Remove="Assets\BtnParametrizacion.png" />
+    <None Remove="Assets\BtnParametrizacionFocused.png" />
+    <None Remove="Assets\BtnParametrizacionHover.png" />
+    <None Remove="Assets\BtnPatametrizacion.png" />
+    <None Remove="Assets\Conectar.png" />
+    <None Remove="Assets\ConectarHover.png" />
+    <None Remove="Assets\ErrorM.png" />
+    <None Remove="Assets\Esperando.png" />
+    <None Remove="Assets\GuardarOn.png" />
+    <None Remove="Assets\Imagen.png" />
+    <None Remove="Assets\InterpretandoM.png" />
+    <None Remove="Assets\Ok.png" />
+    <None Remove="Assets\OkM.png" />
+    <None Remove="Assets\Toggle.png" />
+    <None Remove="Assets\toggleFalse.png" />
+    <None Remove="Config False.png" />
+    <None Remove="Fondo left.png" />
+    <None Remove="Ithealth.png" />
+    <None Remove="Logo ITH.png" />
+    <None Remove="Logo ValiQC.png" />
+    <None Remove="Resul False.png" />
+    <None Remove="Resul True.png" />
+    <None Remove="Salir.png" />
+    <None Remove="Assets\Bottom.png" />
+    <None Remove="Assets\Config False.png" />
+    <None Remove="Assets\Config True.png" />
+    <None Remove="Assets\Fondo left.png" />
+    <None Remove="Assets\Logo ITH.png" />
+    <None Remove="Assets\Logo ValiQC.png" />
+    <None Remove="Assets\Resul False.png" />
+    <None Remove="Assets\Resul True.png" />
+    <None Remove="Assets\Salir.png" />
+    <None Remove="Assets\SalirTrue.png" />
+    <None Remove="views\BottonGuardar.png" />
+    <None Remove="views\Conectar.png" />
+    <None Remove="views\Imagen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\BottonGuardar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Salir.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Barra Carga Resultado.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\btnConexion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BtnConexionFocused.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BtnConexionHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BtnDesconectaHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BtnDesconectar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BtnDesconectarDeshabilitar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BtnParametrizacion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BtnParametrizacionHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BtnParametrizacionFocused.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Conectar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\ConectarHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Config False.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Config True.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\ErrorM.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Esperando.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Fondo left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\GuardarOn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Imagen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\InterpretandoM.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Logo ITH.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Logo ValiQC.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Ok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\OkM.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Resul False.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Resul True.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\SalirTrue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Toggle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\toggleFalse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="views\BottonGuardar.png" />
+    <Resource Include="views\Conectar.png" />
+    <Resource Include="views\Imagen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="32.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Npgsql" Version="8.0.3" />
+    <PackageReference Include="RestSharp" Version="111.2.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
